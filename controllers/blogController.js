@@ -343,8 +343,10 @@ const pagination = async (req, res) => {
             skip = (page - 1) * limit;
         }
 
-        productdata = await Blog.find().sort({ "created_on": "ascending" }).skip(skip).limit(limit)
-
+        productdata = await Blog.find().populate({
+            path: 'written_by', // Use 'creator' field to populate author information
+            select: 'name image short_bio role instagram github linkedin website' // Select the fields you want from the User model
+        }).sort({ "created_on": "ascending" }).skip(skip).limit(limit)
         res.status(200).send({ success: true, data: productdata });
 
 

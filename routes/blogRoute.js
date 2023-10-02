@@ -72,7 +72,7 @@ blog_route.get('/total_blogs', blog_controller.get_count)
 blog_route.put('/data', blog_controller.data)
 
 blog_route.get('/recommended', blog_controller.get_Recommended)
-blog_route.get('/pagination-blogs', blog_controller.pagination)
+blog_route.get('/get-all-blogs', blog_controller.pagination)
 
 
 module.exports = blog_route
