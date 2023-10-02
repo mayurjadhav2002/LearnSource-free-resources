@@ -7,6 +7,8 @@ const nodemailer = require('nodemailer');
 const randomstring = require('randomstring');
 
 
+
+
 const resetpasswordmail = async(name, email, token)=>{
     console.log(email)
 try {
@@ -16,8 +18,8 @@ try {
         secure: true, // use SSL
         requireTLS: true,
         auth:{
-            user:config.email_user,
-            pass: config.email_password
+            user:process.env.EMAIL_USER,
+            pass: process.env.EMAIL_PASSWORD
         }
     });
 
@@ -43,7 +45,7 @@ try {
 }
 const token_generate = async(id) =>{
     try {
-        const token =  await jwt.sign({_id:id}, config.secret_jwt);
+        const token =  await jwt.sign({_id:id}, process.env.TOKEN_KEY);
         return token;
         
     } catch (error) {
