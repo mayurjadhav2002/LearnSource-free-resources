@@ -1,7 +1,6 @@
 const express = require('express');
 const User = require('../models/userModel');
 const bcrypt = require('bcryptjs');
-const config = require('../config/config')
 const jwt = require('jsonwebtoken');
 const nodemailer = require('nodemailer');
 const randomstring = require('randomstring');
