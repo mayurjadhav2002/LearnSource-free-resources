@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import gojo from '../../../public/Assets/gojo.jpg'
 import Link from 'next/link';
-import Checkout from '../checkout/page';
 type TdcartProps = {
   onClose: () => void;
 };
