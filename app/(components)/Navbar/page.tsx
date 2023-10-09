@@ -9,7 +9,6 @@ import Link from "next/link";
 import { RiArrowDropDownLine, RiMenu5Fill } from 'react-icons/ri'
 import { TbUsersGroup } from 'react-icons/tb'
 import { FcFeedback, FcBusinessContact } from 'react-icons/fc'
-import { useUserContext } from "@/app/auth/userContext/userContext";
 import GitHubButton from 'react-github-btn'
 
 export default function Nav() {
@@ -18,7 +17,7 @@ export default function Nav() {
     setOpenOffCanvas(!openOffCanvas)
   }
   const iconClasses = "text-xl text-default-500 pointer-events-none flex-shrink-0";
-  const { user } = useUserContext();
+  // const { user } = useUserContext();
   return (
     <>
 
