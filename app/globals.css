@@ -1,0 +1,153 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  @variants responsive {
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+  }
+}
+
+.internship-blog{
+    background: hsla(20, 100%, 98%, 1);
+
+background: linear-gradient(180deg, rgb(245, 235, 229) 0%, rgb(232, 244, 255) 100%);
+
+background: -moz-linear-gradient(180deg, rgb(255, 243, 235) 0%, rgb(234, 249, 255) 100%);
+
+background: -webkit-linear-gradient(1800deg, rgb(255, 246, 241) 0%, rgb(237, 249, 255) 100%);
+
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FFF7F3", endColorstr="#F1FAFF", GradientType=1 );
+}
+
+
+
+  
+  .item {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+  }
+  
+  .item-1 {
+    background-color: #FA5667;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    animation: item-1_move 1.8s cubic-bezier(.6,.01,.4,1) infinite;
+  }
+  
+  .item-2 {
+    background-color: #7A45E5;
+    top: 0;
+    right: 0;
+    animation: item-2_move 1.8s cubic-bezier(.6,.01,.4,1) infinite;
+  }
+  
+  .item-3 {
+    background-color: #1B91F7;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    animation: item-3_move 1.8s cubic-bezier(.6,.01,.4,1) infinite;
+  }
+  
+  .item-4 {
+    background-color: #FAC24C;
+    bottom: 0;
+    left: 0;
+    animation: item-4_move 1.8s cubic-bezier(.6,.01,.4,1) infinite;
+  }
+  
+  @keyframes item-1_move {
+    0%, 100% {transform: translate(0, 0)} 
+    25% {transform: translate(0, 100px)} 
+    50% {transform: translate(100px, 100px)} 
+    75% {transform: translate(100px, 0)} 
+  }
+  
+  @keyframes item-2_move {
+    0%, 100% {transform: translate(0, 0)} 
+    25% {transform: translate(-100px, 0)} 
+    50% {transform: translate(-100px, 100px)} 
+    75% {transform: translate(0, 100px)} 
+  }
+  
+  @keyframes item-3_move {
+    0%, 100% {transform: translate(0, 0)} 
+    25% {transform: translate(0, -100px)} 
+    50% {transform: translate(-100px, -100px)} 
+    75% {transform: translate(-100px, 0)} 
+  }
+  
+  @keyframes item-4_move {
+    0%, 100% {transform: translate(0, 0)} 
+    25% {transform: translate(100px, 0)} 
+    50% {transform: translate(100px, -100px)} 
+    75% {transform: translate(0, -100px)} 
+  }
+
+@tailwind base;
+@layer base {
+    h1 {
+      @apply text-4xl font-extrabold my-3;
+    
+    }
+    h2 { 
+      @apply text-3xl font-bold my-3;
+    }
+    h3 { 
+      @apply text-2xl font-bold my-3;
+    }
+    h4 {
+        @apply text-xl font-bold my-3;
+      }
+      h5 {
+        @apply text-lg font-bold my-3;
+      }
+      
+ img{
+    @apply rounded-lg;
+ }
+ p{
+    @apply text-lg text-justify;
+ }
+ figcaption{
+    @apply text-center;
+ }
+ figure{
+    @apply py-2;
+ }
+  }
+@tailwind components;
+
+@tailwind utilities;
+
+
+
+
+
+.custom-loader {
+  width:100px;
+  height:100px;
+  border:4px solid #343AF4;
+  background:
+    radial-gradient(farthest-side,#0000 calc(100% - 6px),#343AF4 calc(100% - 4px) 98%,#0000),
+    radial-gradient(farthest-side,#0000 calc(100% - 6px),#6065ee calc(100% - 4px) 98%,#0000);
+  background-size: 46px 46px;
+  background-position: 0 0,24px 24px;
+  animation: h4 1s infinite;
+}
+
+@keyframes h4{
+  100% {background-position: -46px 0px,24px 70px}
+}

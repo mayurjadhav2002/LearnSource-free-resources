@@ -1,0 +1,46 @@
+    h1 {
+        @apply text-4xl font-extrabold my-3;
+
+    }
+
+    h2 {
+        @apply text-3xl font-bold my-3;
+    }
+
+    h3 {
+        @apply text-2xl font-bold my-3;
+    }
+
+    h4 {
+        @apply text-xl font-bold my-3;
+    }
+
+    h5 {
+        @apply text-lg font-bold my-3;
+    }
+
+    img {
+        @apply rounded-lg;
+    }
+
+    p {
+        @apply text-lg text-justify;
+    }
+
+    figcaption {
+        @apply text-center;
+    }
+
+    figure {
+        @apply py-2;
+    }
+    img{
+        width: 100%;
+        border-radius: 15px;
+        cursor: pointer;
+        transition: 0.2s ease-in-out;
+    }
+    img:hover{
+        transform: scale(102%);
+
+    }

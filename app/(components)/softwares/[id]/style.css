@@ -1,0 +1,25 @@
+.card-software{
+    transition: transform .4s;
+    
+    }
+    
+    .card-software:hover{
+        transform: scale(1.05);
+        background-color: rgb(252, 255, 255);
+    }
+    
+    .datalist a{
+        color: blue;
+        text-decoration: underline;
+    }
+    .datalist ul{
+        margin-top: 4px;
+    }
+    .datalist .wpsm-accordion-trigger{
+      display: none;
+    }
+    .accordion-content {
+        margin-top: 25px;
+        font-size: 17px;
+        word-wrap: break-word;
+      }
