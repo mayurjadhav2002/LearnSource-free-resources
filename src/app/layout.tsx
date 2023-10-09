@@ -56,6 +56,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+      <link
+            href="https://fonts.googleapis.com/css2?family=Abhaya+Libre&display=swap"
+            rel="stylesheet"
+          />
         <link rel='icon' href='https://stoffspot.com/Assets/lOGO-01.webp' />
         <meta name="google-site-verification" content="9V1wd7g77Y9gGLlgJlia3CCJ2qI8DOFholXrXgB6Ilw" />
         <meta property="og:title" content="STOFFSPOT | COMMING SOON" />

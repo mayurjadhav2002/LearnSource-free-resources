@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
-import gojo from '../../../public/Assets/gojo.jpg'
 import Link from 'next/link';
 type TdcartProps = {
   onClose: () => void;
@@ -9,57 +8,50 @@ type TdcartProps = {
 var products = [
   {
     id: 1,
-    name: 'Throwback Hip Bag',
+    name: 'Comming Soon',
     href: '#',
-    color: 'Salmon',
-    price: '$90.00',
+    color: '',
+    price: '0',
     quantity: 1,
-    imageSrc: 'https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-01.jpg',
+    imageSrc: 'https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8c25lYWtlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
     imageAlt: 'Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt.',
-  },
-  {
+  },{
     id: 2,
-    name: 'Medium Stuff Satchel',
+    name: 'Comming Soon',
     href: '#',
-    color: 'Blue',
-    price: '$34.00',
+    color: '',
+    price: '0',
     quantity: 1,
-    imageSrc: 'https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-02.jpg',
-    imageAlt:
-      'Front of satchel with blue canvas body, black straps and handle, drawstring top, and front zipper pouch.',
-  },
-  {
+    imageSrc: 'https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8c25lYWtlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
+    imageAlt: 'Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt.',
+  },{
     id: 3,
-    name: 'Classic Leather Sneakers',
+    name: 'Comming Soon',
     href: '#',
-    color: 'White',
-    price: '$79.99',
+    color: '',
+    price: '0',
     quantity: 1,
-    imageSrc: 'https://example.com/classic-sneakers.jpg',
-    imageAlt: 'White classic leather sneakers with a clean design.',
-  },
-  {
+    imageSrc: 'https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8c25lYWtlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
+    imageAlt: 'Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt.',
+  },{
     id: 4,
-    name: 'Vintage Denim Jacket',
+    name: 'Comming Soon',
     href: '#',
-    color: 'Denim Blue',
-    price: '$59.00',
+    color: '',
+    price: '0',
     quantity: 1,
-    imageSrc: 'https://example.com/vintage-denim-jacket.jpg',
-    imageAlt: 'Denim blue vintage-style denim jacket with faded details.',
-  },
-  {
+    imageSrc: 'https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8c25lYWtlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
+    imageAlt: 'Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt.',
+  },{
     id: 5,
-    name: 'Smartphone Holder Stand',
+    name: 'Comming Soon',
     href: '#',
-    color: 'Black',
-    price: '$12.99',
+    color: '',
+    price: '0',
     quantity: 1,
-    imageSrc: 'https://example.com/smartphone-holder.jpg',
-    imageAlt: 'Black smartphone holder stand for desk or bedside use.',
-  },
-  
-  // ... (other products)
+    imageSrc: 'https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8c25lYWtlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
+    imageAlt: 'Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt.',
+  }
 ];
 
 const Tdcart: React.FC<TdcartProps> = ({ onClose }) => {
@@ -119,9 +111,11 @@ const Tdcart: React.FC<TdcartProps> = ({ onClose }) => {
                           <li key={product.id} className="flex py-6">
                             <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
                               <Image
-                                src={gojo}
+                                src={product.imageSrc}
                                 alt={product.imageAlt}
                                 className="h-full w-full object-cover object-center"
+                                width={100}
+                                height={100}
                               />
                             </div>
 
@@ -163,7 +157,7 @@ const Tdcart: React.FC<TdcartProps> = ({ onClose }) => {
                   </div>
                  <div className="mt-6">
                     <Link
-                    href="/checkout"
+                    href="/Checkout"
                       className="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
                     >
                       Checkout

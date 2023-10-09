@@ -2,10 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@font-face {
+  font-family: 'AbeatbyKai';
+  src: url('../../public/Assets/font/ABEAKRG.TTF') format('TTF');
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+}
+
+* {
+  font-family: 'Abhaya Libre';
+}
+h1, h2,.heading{
+  font-family: 'AbeatbyKai';
 }
 
 @media (prefers-color-scheme: dark) {
@@ -16,24 +31,19 @@
   }
 }
 
+::-webkit-scrollbar {
+  width: 0.1px;
+}
+a{
+cursor:pointer; 
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-.custom-scrollbar::-webkit-scrollbar {
-  width: 2px;
-}
-.custom-scrollbar::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-.custom-scrollbar::-webkit-scrollbar-thumb {
-  background: #888;
-}
-.custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  background-color: rgba(240, 248, 255, 0.116);
+  
 }

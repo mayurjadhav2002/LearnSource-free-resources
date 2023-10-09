@@ -38,7 +38,8 @@ const Navbar = () => {
             settoggleliked(false)
 
         }
-    } function handleclicknav3() {
+    } 
+    function handleclicknav3() {
         if (togglenav3) {
             settogglenav3(false)
         } else {
@@ -97,10 +98,10 @@ const Navbar = () => {
     setIsMyComponentVisible(false);
   };
     return (
-        <nav className={`bg-teal-700 w-full z-20 top-0 left-0 shadow-slate-800`}>
+        <nav className={`bg-[rgba(63,84,105,255)] w-full z-20 top-0 left-0 fixed shadow-slate-800`}>
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">      
                 <div className={`flex items-center ${togglenavbar ? "hidden" : "block"}`}>
-                    <a href="/"><span className="self-center md:text-2xl text-xl tracking-normal md:tracking-[.5em] whitespace-nowrap text-white">STOFFSPOT</span></a>
+                    <a href="/home"><span className="self-center md:text-2xl text-xl tracking-normal md:tracking-[.5em] whitespace-nowrap text-white heading">STOFFSPOT</span></a>
                 </div>
                 <div className={`flex ${togglenavbar ? "justify-between w-[100%]" : "block"} `}>
                     <div className='flex flex-wrap justify-center align-middle'>
@@ -157,7 +158,7 @@ const Navbar = () => {
                         </div>
                         <div>
                             <div className="h-full w-full flex flex-1 align-middle pt-1">
-                                <button onClick={toggleMyComponent} className="cursor-pointer text-white md:text-lg text-xl mx-2"><span className="hidden md:flex"><BsCart3 classname="cursor-pointer mx-3 md:block text-2xl  text-white"/> <span className="align-top relative -top-3 bg-red-500 text-xs rounded-full px-2 py-1 mx-1">
+                                <button onClick={toggleMyComponent} className="cursor-pointer text-white md:text-lg text-xl mx-2"><span className="hidden md:flex"><BsCart3 className="cursor-pointer mx-3 md:block text-2xl  text-white"/> <span className="align-top relative -top-3 bg-red-500 text-xs rounded-full px-2 py-1 mx-1">
                                         {amount}
                                     </span></span><AiOutlineShoppingCart  className='cursor-pointer md:hidden flex mx-3 text-2xl font-extralight text-white'/>
                                     {isMyComponentVisible ? <Tdcart onClose={hideTdcart}/> : null}
