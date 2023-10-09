@@ -3,11 +3,11 @@ import React from 'react'
 import { Card, CardBody, Image, Badge } from "@nextui-org/react";
 import Link from 'next/link';
 
-function UdemyCard({param}:Object) {
+function UdemyCard({param}:any) {
   return (
 <>
 {
-    param.map((data:Object, index:Int16Array)=> 
+    param.map((data:any, index:any)=> 
     
  
 <Card as={Link} href={data.link} target='_blank' className="w-auto cursor-pointer hover:-translate-y-2 h-auto" key={index}>

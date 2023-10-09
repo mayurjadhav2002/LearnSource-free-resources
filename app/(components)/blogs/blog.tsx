@@ -4,7 +4,7 @@ import { Card, CardBody, Avatar, Image } from "@nextui-org/react";
 import Link from "next/link";
 import React from 'react'
 
-function Blog({data}) {
+function Blog({data}:any) {
     if (!data) return <div className='text-center relative h-72'><Loading /></div>
 
     return (
@@ -12,7 +12,7 @@ function Blog({data}) {
         <div className="p-2">
 
 
-        {data.map((data: { _id: any; written_by: { image: any; name: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | React.PromiseLikeOfReactNode | null | undefined; short_bio: any; }; title: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | React.PromiseLikeOfReactNode | null | undefined; description: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | React.PromiseLikeOfReactNode | null | undefined; }, index: Nu)=> 
+        {data.map((data: { _id: any; written_by: { image: any; name: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | React.PromiseLikeOfReactNode | null | undefined; short_bio: any; }; title: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | React.PromiseLikeOfReactNode | null | undefined; description: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | React.PromiseLikeOfReactNode | null | undefined; }, index: any)=> 
             <Card  key={index} as={Link} href={`blogs/${data._id}`}
                 className="border-none my-5 mx-auto dark:bg-default-100/50 max-w-3xl dark:bg-gray-200"
                 shadow="sm">

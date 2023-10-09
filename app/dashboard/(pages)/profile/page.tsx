@@ -6,12 +6,12 @@ import Loading from '@/app/loading';
 import { FaRegEdit } from 'react-icons/fa'
 
 function Page() {
-  const { user } = useUserContext();
+  const { user }:any = useUserContext();
 
   const [image, setImage] = useState({ preview: `${process.env.NEXT_PUBLIC_BACKEND_URL}/static/avatar/${user.image}`, data: '' });
-  const inputRef = useRef(null);
+  const inputRef:any = useRef(null);
 
-  const handleFileChange = async (e) => {
+  const handleFileChange = async (e:any) => {
     const img = {
       preview: URL.createObjectURL(e.target.files[0]),
       data: e.target.files[0],

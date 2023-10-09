@@ -10,7 +10,7 @@ export default function page({ params }: { params: any }) {
 
 
 
-    const [data, setData] = useState();
+    const [data, setData]:any = useState({});
 
     useEffect(() => {
         const fetchData = async () => {

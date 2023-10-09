@@ -6,16 +6,11 @@
 import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
 
 import { Autoformat } from '@ckeditor/ckeditor5-autoformat';
-import { Autosave } from '@ckeditor/ckeditor5-autosave';
 import { Bold, Code, Italic, Underline } from '@ckeditor/ckeditor5-basic-styles';
 import { BlockQuote } from '@ckeditor/ckeditor5-block-quote';
 import { CloudServices } from '@ckeditor/ckeditor5-cloud-services';
-import { CodeBlock } from '@ckeditor/ckeditor5-code-block';
 import { Essentials } from '@ckeditor/ckeditor5-essentials';
 import { Heading } from '@ckeditor/ckeditor5-heading';
-import { Highlight } from '@ckeditor/ckeditor5-highlight';
-import { HorizontalLine } from '@ckeditor/ckeditor5-horizontal-line';
-import { DataSchema } from '@ckeditor/ckeditor5-html-support';
 import { Indent } from '@ckeditor/ckeditor5-indent';
 import { Link } from '@ckeditor/ckeditor5-link';
 import { TodoList } from '@ckeditor/ckeditor5-list';
@@ -25,7 +20,6 @@ import { PasteFromOffice } from '@ckeditor/ckeditor5-paste-from-office';
 import { Table } from '@ckeditor/ckeditor5-table';
 import { TextTransformation } from '@ckeditor/ckeditor5-typing';
 import { EditorWatchdog } from '@ckeditor/ckeditor5-watchdog';
-import { WordCount } from '@ckeditor/ckeditor5-word-count';
 
 // You can read more about extending the build with additional plugins in the "Installing plugins" guide.
 // See https://ckeditor.com/docs/ckeditor5/latest/installation/plugins/installing-plugins.html for details.
@@ -33,17 +27,12 @@ import { WordCount } from '@ckeditor/ckeditor5-word-count';
 class Editor extends ClassicEditor {
 	public static override builtinPlugins = [
 		Autoformat,
-		Autosave,
 		BlockQuote,
 		Bold,
 		CloudServices,
 		Code,
-		CodeBlock,
-		DataSchema,
 		Essentials,
 		Heading,
-		Highlight,
-		HorizontalLine,
 		Indent,
 		Italic,
 		Link,
@@ -53,8 +42,7 @@ class Editor extends ClassicEditor {
 		Table,
 		TextTransformation,
 		TodoList,
-		Underline,
-		WordCount
+		Underline
 	];
 
 	public static override defaultConfig = {

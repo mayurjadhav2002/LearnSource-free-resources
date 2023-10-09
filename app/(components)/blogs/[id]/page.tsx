@@ -6,10 +6,10 @@ import Loading from '@/app/loading';
 
 export default function page({ params }: { params: any }) {
 
-  const [blog, setBlog] = useState();
+  const [blog, setBlog]:any = useState({});
 
   useEffect(() => {
-    const fetchData = async (id) => {
+    const fetchData = async (id:any) => {
       try {
         const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/blog/blog_by_id?id=${id}`, { next: { revalidate: 3600 } });
         const newData = await response.json();

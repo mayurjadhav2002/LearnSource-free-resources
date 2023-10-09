@@ -88,17 +88,16 @@ export default function Nav() {
                 {/* Policies */}
                 <DropdownSection title="policies">
 
-                  <DropdownItem
-                    as={Link} href={'/disclaimer'}
+                  <Link href={'/disclaimer'}
                   >
                     Disclaimer
-                  </DropdownItem>
+                  </Link>
 
 
-                  <DropdownItem as={Link} href={'/terms-and-conditions'}
+                  <Link href={'/terms-and-conditions'}
                   >
                     Terms and Conditions
-                  </DropdownItem>
+                  </Link>
 
 
 
@@ -176,13 +175,13 @@ export default function Nav() {
 
         {/* Policies */}
         <DropdownSection title="policies">
-          <DropdownItem as={Link} href={'/disclaimer'}>
+          <Link href={'/disclaimer'}>
             Disclaimer
-          </DropdownItem>
+          </Link>
 
-          <DropdownItem as={Link} href={'/terms-and-conditions'}>
+          <Link href={'/terms-and-conditions'}>
             Terms and Conditions
-          </DropdownItem>
+          </Link>
 
           <DropdownItem>
             Privacy policy

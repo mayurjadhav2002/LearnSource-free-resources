@@ -1,13 +1,13 @@
 // userContext.js
 import React, { createContext, useContext, useEffect, useState } from 'react';
 
-const UserContext = createContext();
+const UserContext = createContext({});
 
 export function useUserContext() {
   return useContext(UserContext);
 }
 
-export function UserContextProvider({ children }) {
+export function UserContextProvider({ children }:any) {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(false)
   useEffect(() => {
